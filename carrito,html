@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>TITULO DEL CARRO</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+function sendToFlash (id, name, price) {
+var p = new Object();
+p.PkProduct = id
+p.Name = name
+p.Price = price
+p.Qty = 1
+thisMovie("sample").addTC(p);
+}
+
+function addedToCart(txt) {
+document.form1.output.value = " "+txt;
+}
+
+function thisMovie(movieName) {
+if (navigator.appName.indexOf("Microsoft") != -1) {
+return top.frames['bottomFrame'].window[movieName]
+} else {
+return top.frames['bottomFrame'].document[movieName]
+}
+}
+function change(sel){
+var where = (sel==1)?"articulo.htm" : "lista2.htm";
+document.location.href = where
+}
+</script>
+<style type="text/css">
+<!--
+.caja {
+background-color: #7C212A;
+border: none #996600;
+}
+body {
+background-color: #7C212A;
+}
+.style1 {color: #FFFFFF}
+.style4 {
+color: #FFFFFF;
+font-size: 18px;
+font-weight: bold;
+font-style: italic;
+font-family: Arial, Helvetica, sans-serif;
+}
+-->
+</style>
+</head>
+
+<body link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF">
+<table width="592" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#7C212A">
+<!--DWLayoutTable-->
+<tr><td height="19" colspan="2" align="center"> <form name="form2" method="post" action="">
+</form></td>
+<td width="11">&nbsp;</td>
+<td width="4">&nbsp;</td>
+<tr align="left">
+<td height="19" colspan="2"><a href=""></a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="215" colspan="3" align="center" valign="top"> <form name="form1" method="post" action="">
+<font color="#FFFFFF"><br>
+<b><font size="+2">
+<input name="output" type="text" class="caja" id="output" size="115" readonly="true">
+</font></b> </font>
+</form></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="59" colspan="2" valign="top"><div align="center">
+<p class="style4">ARTICULOS</p>
+<p class="style1">&nbsp;</p>
+</div></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="334" height="119" valign="top"><p><span class="style1"><b>Nombre:</b>Mini Crossaint relleno de Espinaca, Tocino y Mozarella<br>
+<b>Precio:</b> 0.35</span></p> <p>
+<input type="button" name="add" value="colocar en carrito" onClick="sendToFlash('1', 'Mini Crossaint relleno de Espinaca, Tocino y Mozarella', '0.35')">
+
+
+
+</p></td>
+<td width="352" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing=
+
